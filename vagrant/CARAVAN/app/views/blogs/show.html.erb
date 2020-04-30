@@ -56,7 +56,9 @@
  
       <!-- 編集部分 -->
       <%= link_to "編集", edit_blog_path(@blog) %>
-      <a href="#">削除</a>
+      <!-- blog_pathはresourcesが定義してくれています -->
+      <!-- @blogはアクションから渡ってきている投稿記事のデータ -->
+      <%= link_to "削除", blog_path(@blog), method: :delete %>
  
       <div class="author-case clearfix">
         <div class="author-image"></div>
